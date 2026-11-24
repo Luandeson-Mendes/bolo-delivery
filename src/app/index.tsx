@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import {
   ScrollView,
   StyleSheet,
@@ -6,14 +7,15 @@ import {
   View,
 } from "react-native";
 
-export default function HomeScreen({ onEntrarPress }) {
+export default function HomeScreen() {
+  const router = useRouter();
   return (
     <ScrollView style={styles.container}>
 
         <View style={styles.header}>
         <TouchableOpacity
             style={styles.loginButton}
-            onPress={onEntrarPress}
+            onPress={() => router.navigate("/login")}
             activeOpacity={0.8}>
 
            <Text style={styles.loginButtonText}>

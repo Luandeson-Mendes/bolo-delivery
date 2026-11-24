@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import {useState} from "react";
 import {
     Alert,
@@ -10,7 +11,9 @@ import {
     TouchableOpacity,
     View,
 } from "react-native";
-export default function LoginScreen({onBack}) {
+export default function LoginScreen() {
+    const router = useRouter();
+
     const [modoCadastro, setModoCadastro] = useState(false);
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
@@ -32,12 +35,12 @@ export default function LoginScreen({onBack}) {
 
     return (
         <KeyboardAvoidingView
-            style={styles.coontainer}
+            style={styles.container}
             behavior={Platform.OS === "ios" ? "padding" : undefined}>
             <ScrollView contentContainerStyle={styles.conteudo}
                 keyboardShouldPersistTaps="handled">
                 <TouchableOpacity style={styles.voltar}
-                    onPress={onBack}
+                    onPress={() => router.navigate("/")}
                     activeOpacity={0.7}>
                     
                     <Text style={styles.textoVoltar}>
@@ -124,7 +127,7 @@ export default function LoginScreen({onBack}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "FFF8F0",
+        backgroundColor: "#FFF8F0",
     },
     conteudo: {
         flexGrow: 1,
@@ -188,7 +191,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     input: {
-        borderWeight: 1,
+        borderWidth: 1,
         borderColor: "#E9D9D0",
         backgroundColor: "#FFFCF9",
         borderRadius: 12,
