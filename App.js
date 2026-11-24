@@ -15,3 +15,14 @@ export default function App() {
         <HomeScreen onEntrarPress={() => setTela("login")}/>
     );
 }
+
+    <View className="flex-row flex-wrap justify-between">
+        {foods.map((food) =>(
+            <foodCard
+                key={food.id}
+                name={food.name}
+                price={food.prices}
+                emoji={food.emoji}
+            />
+        ))}
+    </View>
