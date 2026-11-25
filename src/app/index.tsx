@@ -7,6 +7,8 @@ import {
   View,
 } from "react-native";
 
+import FoodCard from "../components/FoodCard";
+import { foods } from "../constants/foods";
 export default function HomeScreen() {
   const router = useRouter();
   return (

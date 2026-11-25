@@ -50,10 +50,10 @@ export default function LoginScreen() {
 
                 <View style={styles.cabecalho}>
                     <Text style={styles.emoji}>
-                        bolo
+                        Login
                     </Text>
                     <Text style={styles.nome}>
-                        bolo_delivery
+                        Nome do app
                     </Text>
                     <Text style={styles.subtitulo}>
                         SEU PRÓXIMO BOLO FAVORITO ESTÁ AQUI
@@ -62,7 +62,7 @@ export default function LoginScreen() {
 
                 <View style={styles.formulario}>
                     <Text style={styles.titulo}>
-                        {modoCadastro ? "Crie sua conta" : "Que bom ter você aqui!"}
+                        {modoCadastro ? "Crie sua conta" : "Que bom ter você de volta!"}
                     </Text>
 
                     <Text style={styles.descricao}>
@@ -108,7 +108,7 @@ export default function LoginScreen() {
 
                     <View style={styles.linhaCadastro}>
                         <Text style={styles.textoCadastro}>
-                            {modoCadastro ? "Já tem uma conta?" : "Ainda não tem uma conta?"}
+                            {modoCadastro ? "Já tem uma conta?" : "Ainda não tem uma conta? "}
                         </Text>
 
                         <TouchableOpacity
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     },
     voltar: {
         alignSelf: "flex-start",
-        paddingVertical: 10,
+        paddingVertical: 40,
         paddingHorizontal: 12,
     },
     textoVoltar: {
